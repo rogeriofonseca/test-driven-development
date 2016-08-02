@@ -11,7 +11,12 @@ public class Dollar {
         this.amount = amount;
     }
 
-    void times(int multipler) {
-        amount *= multipler;
+    Dollar times(int multipler) {
+        return new Dollar(amount * multipler);
+    }
+    
+    public boolean equals(Object object){
+        Dollar dollar = (Dollar) object;
+        return amount == dollar.amount;
     }
 }
