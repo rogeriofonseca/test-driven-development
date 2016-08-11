@@ -4,12 +4,12 @@ public class Dollar extends Money{
 
     public Dollar() {
     }
-    
+
     public Dollar(int amount) {
-        this.amount = amount;
+        super(amount);
     }
 
-    Dollar times(int multipler) {
-        return new Dollar(amount * multipler);
+    Money times(int multiplier){
+        return new Dollar(amount * multiplier);
     }
 }
