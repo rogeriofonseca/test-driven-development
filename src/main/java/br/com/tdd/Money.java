@@ -3,6 +3,7 @@ package br.com.tdd;
 public abstract class Money {
     
     protected int amount;
+    abstract String currency();
     
     public Money(){
     }
