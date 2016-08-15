@@ -2,22 +2,14 @@ package br.com.tdd;
 
 public class Franc extends Money{
     
-    private String currency;
-    
     public Franc() {
     }
 
-    public Franc(int amount) {
-        this.amount = amount;
-        currency = "CHF";
+    public Franc(int amount, String currency) {
+        super(amount,currency);
     }
 
     Money times(int multiplier){
-        return new Franc(amount * multiplier);
-    }
-
-    @Override
-    String currency() {
-        return currency;
+        return Money.franc(amount * multiplier);
     }
 }

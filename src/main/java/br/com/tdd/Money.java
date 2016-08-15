@@ -3,13 +3,18 @@ package br.com.tdd;
 public abstract class Money {
     
     protected int amount;
-    abstract String currency();
-    
+    protected String currency;
+
     public Money(){
     }
 
-    public Money(int amount) {
+    public Money(int amount, String currency) {
         this.amount = amount;
+        this.currency = currency;
+    }
+    
+    String currency(){
+        return currency;
     }
 
     abstract Money times(int multipler);
@@ -20,10 +25,10 @@ public abstract class Money {
    }
 
     static Money dollar(int amount){
-        return new Dollar(amount);
+        return new Dollar(amount, "USD");
     }
     
     static Money franc(int amount){
-        return new Franc(amount);
+        return new Franc(amount, "CHF");
     }
 }

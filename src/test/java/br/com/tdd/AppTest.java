@@ -4,7 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-public class AppTest 
+public class AppTest
     extends TestCase
 {
     public AppTest( String testName )
@@ -34,7 +34,7 @@ public class AppTest
 
     public void testFrancMultiplication()
     {
-        Franc five = new Franc(5);
+        Money five = Money.franc(5);
         assertEquals(Money.franc(10),five.times(2));
         assertEquals(Money.franc(15),five.times(3));
     }
